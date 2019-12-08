@@ -74,6 +74,7 @@ type ContainerRequest struct {
 	Networks       []string            // for specifying network names
 	NetworkAliases map[string][]string // for specifying network aliases
 	SkipReaper     bool                // indicates whether we skip setting up a reaper for this
+	AutoRemove     bool                // if set to true, the container will be removed from the host when stopped by docker, not the reaper container
 	ReaperImage    string              // alternative reaper image
 }
 
